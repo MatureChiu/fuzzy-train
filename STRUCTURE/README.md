@@ -1,0 +1,1 @@
+# structure class pattern
