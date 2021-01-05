@@ -13,11 +13,11 @@ CFLAGS += -I$(LOCAL_INCLUDE_PATH)
 
 .PHONY: all install clean disclean
 
-$(LOCAL_MODULE): $(LOCAL_OBJ_FILES)
-	@$(CXX) -o $@ $<
-
 $(LOCAL_OBJ_FILES):	$(LOCAL_SRC_FILES)
 	@$(CXX) -Wall -c $^ $(CFLAGS)
+
+$(LOCAL_MODULE): $(LOCAL_OBJ_FILES)
+	@$(CXX) -o $@ $<
 
 all: $(LOCAL_MODULE) install
 
